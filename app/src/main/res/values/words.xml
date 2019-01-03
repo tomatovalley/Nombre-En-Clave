@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="codes">
+    <item>Perro</item>
+    <item>Gato</item>
+    <item>Candado</item>
+    <item>Puerta</item>
+    <item>Serpiente</item>
+    <item>Cocinero</item>
+    <item>Paraguas</item>
+    <item>Revista</item>
+    <item>Perico</item>
+    <item>Pistola</item>
+    <item>Balas</item>
+    <item>Albañil</item>
+    <item>México</item>
+    <item>Argentina</item>
+    <item>Canada</item>
+    <item>PuertoRico</item>
+    <item>Periodista</item>
+    <item>Estudiante</item>
+    <item>Profesor</item>
+    <item>Lápiz</item>
+    <item>Piano</item>
+    <item>Guitarra</item>
+    <item>Trompeta</item>
+    <item>Acordeon</item>
+    <item>Foco</item>
+    <item>Libro</item>
+    <item>Borrador</item>
+    <item>Pie</item>
+    <item>Mano</item>
+    <item>Cabeza</item>
+</string-array>
+</resources>
