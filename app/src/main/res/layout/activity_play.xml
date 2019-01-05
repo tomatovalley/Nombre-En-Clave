@@ -8,11 +8,14 @@
         android:background="@drawable/maderabackground"
         android:layout_height="match_parent"
         tools:context=".Play">
-
+<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
+            android:layout_width="430dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
         <LinearLayout
@@ -304,7 +307,6 @@
                 />
 
             </RelativeLayout>
-
         </LinearLayout>
         <LinearLayout
                 android:layout_marginTop="5dp"
@@ -501,6 +503,48 @@
 
 
     </LinearLayout>
+    <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+            <ImageView
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+            <Spinner
+                    android:id="@+id/spinnernumbers"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+
+            >
+
+            </Spinner>
+            <Spinner
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"></Spinner>
+            <ImageButton android:layout_marginTop="15dp"
+                         android:layout_marginStart="20dp"
+                         android:layout_width="100dp"
+                         android:layout_height="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

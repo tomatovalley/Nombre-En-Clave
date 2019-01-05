@@ -1,35 +1,634 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string-array name="codes">
+    <item>Arándano</item>
+    <item>Frambuesa</item>
+    <item>Fresa</item>
+    <item>Grosella</item>
+    <item>Zarzamora</item>
+    <item>Mora</item>
+    <item>Limón</item>
+    <item>Mandarina</item>
+    <item>Naranja</item>
+    <item>Guayaba</item>
+    <item>Pomelo</item>
+    <item>Melón</item>
+    <item>Sandía</item>
+    <item>Carambola</item>
+    <item>Chirimoya</item>
+    <item>Dátil</item>
+    <item>Litchi</item>
+    <item>Mango</item>
+    <item>Papaya</item>
+    <item>Melón</item>
+    <item>Piña</item>
+    <item>Plátano</item>
+    <item>Manzana</item>
+    <item>Cereza</item>
+    <item>Ciruela</item>
+    <item>Higo</item>
+    <item>Pera</item>
+    <item>Uva</item>
+    <item>Almendr</item>
+    <item>Avellana</item>
+    <item>Cacahuate</item>
+    <item>Nuez</item>
+    <item>Pistache</item>
+    <item>Cibernética</item>
+    <item>Circuito</item>
+    <item>Computación</item>
+    <item>Desarrollo</item>
+    <item>Digital</item>
+    <item>Diseño</item>
+    <item>Dispositivo</item>
+    <item>Domótica</item>
+    <item>Hardware</item>
+    <item>Software</item>
+    <item>Comunicación</item>
+    <item>Informática</item>
+    <item>Interface</item>
+    <item>Chip</item>
+    <item>Res</item>
+    <item>Robótica</item>
+    <item>Internet</item>
+
+    <item>Alergia</item>
+    <item>Antibiótico</item>
+    <item>Antídoto</item>
+    <item>Caloría</item>
+    <item>Cicatrizar</item>
+    <item>Cirugía</item>
+    <item>Clínica</item>
+    <item>Curación</item>
+    <item>Diagnóstico</item>
+    <item>Enfermedad</item>
+    <item>Epidemia</item>
+    <item>Farmacia</item>
+
+    <item>Fármaco</item>
+    <item>Hematólogo</item>
+    <item>Hidratación</item>
+    <item>Higiene</item>
+    <item>Hospital</item>
+    <item>Inmunidad</item>
+    <item>Inocular</item>
+    <item>Insulina</item>
+    <item>Inyección</item>
+    <item>Medicamento</item>
+    <item>Neurología</item>
+    <item>Ortodoncia</item>
+    <item>Oftalmología</item>
+    <item>Patología</item>
+    <item>Pediatría</item>
+    <item>Terapia</item>
+    <item>Vacuna</item>
+    <item>Vitamina</item>
+
+    <item>Antología</item>
+    <item>Artículo</item>
+    <item>Bibliografía</item>
+    <item>Biblioteca</item>
+    <item>Caligrafía</item>
+    <item>Canon</item>
+    <item>Capítulo</item>
+    <item>Certamen</item>
+    <item>Crítica</item>
+    <item>Cuento</item>
+    <item>Dedicatoria</item>
+    <item>Diálogo</item>
+    <item>Divulgación</item>
+    <item>Editor</item>
+    <item>Editorial</item>
+    <item>Ensayo</item>
+    <item>Épica</item>
+    <item>Epílogo</item>
+    <item>Epopeya</item>
+    <item>Escritor</item>
+    <item>Etimología</item>
+    <item>Fonética</item>
+    <item>Género</item>
+    <item>Gramática</item>
+    <item>Léxico</item>
+    <item>Leyenda</item>
+    <item>Librería</item>
+    <item>Libro</item>
+    <item>Lírica</item>
+    <item>Mitología</item>
+    <item>Papel</item>
+    <item>Página</item>
+    <item>Prólogo</item>
+    <item>Ortografía</item>
+    <item>Prosa</item>
+    <item>Retórica</item>
+    <item>Trama</item>
+    <item>Sinopsis</item>
+    <item>Verso</item>
+    <item>Poema</item>
+
+    <item>Artículo</item>
+    <item>Cárcel</item>
+    <item>Cómplice</item>
+    <item>Constitución</item>
+    <item>Leyes</item>
+    <item>Contrato</item>
+    <item>Convenio</item>
+    <item>Corrupción</item>
+    <item>Crimen</item>
+    <item>Custodia</item>
+    <item>Delito</item>
+    <item>Denuncia</item>
+    <item>Derecho</item>
+    <item>Derogar</item>
+    <item>Defensa</item>
+    <item>Diligencia</item>
+    <item>Edicto</item>
+    <item>Fallo</item>
+    <item>Fianza</item>
+    <item>Juez</item>
+    <item>Jurado</item>
+    <item>Jurisdicción</item>
+    <item>Legislación</item>
+    <item>Ley</item>
+    <item>Patrimonio</item>
+    <item>Reglamento</item>
+    <item>Testigo</item>
+    <item>Tribunal</item>
+    <item>Veredicto</item>
+    <item>Sanción</item>
+    <item>Querella</item>
+    <item>Libertad</item>
+
+
+    <item>Acuífero</item>
+    <item>Aire</item>
+    <item>Alga</item>
+    <item>Anfibio</item>
+    <item>Arena</item>
+    <item>Arroyo</item>
+    <item>Atmósfera</item>
+    <item>Biosfera</item>
+    <item>Bosque</item>
+    <item>Cenote</item>
+    <item>Ciclón</item>
+    <item>Clima</item>
+    <item>Biomasa</item>
+    <item>Bosque</item>
+    <item>Cueva</item>
+    <item>Ecología</item>
+    <item>Ecosistema</item>
+    <item>Especie</item>
+    <item>Fauna</item>
+    <item>Flora</item>
+    <item>Hábitat</item>
+    <item>Hielo</item>
+    <item>Meseta</item>
+    <item>Plantas</item>
+    <item>Río</item>
+    <item>Mar</item>
+    <item>Tormenta</item>
+    <item>Tsunami</item>
+    <item>Valle</item>
+    <item>Viento</item>
+    <item>Desierto</item>
+    <item>Volcán</item>
+    <item>Montañas</item>
+
+
+    <item>Análisis</item>
+    <item>Astronomía</item>
+    <item>Axioma</item>
+    <item>Clonación</item>
+    <item>Empirismo</item>
+    <item>Evolución</item>
+    <item>Experimento</item>
+    <item>Genética</item>
+    <item>Hipótesis</item>
+    <item>Investigar</item>
+    <item>Laboratorio</item>
+    <item>Método</item>
+
+
+    <item>Medición</item>
+    <item>Observación</item>
+    <item>Razonamiento</item>
+    <item>Teorema</item>
+    <item>Teoría</item>
+    <item>Tesis</item>
+    <item>Tratado </item>
+
+
+    <item>Azálea</item>
+    <item>Begonia</item>
+    <item>Camelia</item>
+    <item>Clavel</item>
+    <item>Dalia</item>
+    <item>Gardenia</item>
+    <item>Geranio</item>
+    <item>Girasol</item>
+    <item>Hortensia</item>
+    <item>Jacinto</item>
+    <item>Lila</item>
+    <item>Lirio</item>
+    <item>Margarita</item>
+    <item>Orquídea</item>
+    <item>Petunia</item>
+
+
+    <item>Aristocracia</item>
+    <item>Arqueología</item>
+    <item>Barroco</item>
+    <item>Burguesía</item>
+    <item>Civilización</item>
+    <item>Conquista</item>
+    <item>Capitalismo</item>
+    <item>Dictadura</item>
+    <item>Dinastía</item>
+    <item>Era</item>
+    <item>Federalismo</item>
+    <item>Ilustración</item>
+    <item>Invasión</item>
+    <item>Nacionalismo</item>
+    <item>Rebelión</item>
+    <item>Renacimiento</item>
+    <item>Siglo</item>
+    <item>Socialismo</item>
+    <item>Sufrago</item>
+    <item>República</item>
+
+    <item>Acorde</item>
+    <item>Acústica</item>
+    <item>Afinación</item>
+    <item>Arco</item>
+    <item>Armonía</item>
+    <item>Armónica</item>
+    <item>Arpa</item>
+    <item>Bajo</item>
+    <item>Balada</item>
+    <item>Banda</item>
+    <item>Batería</item>
+    <item>Canción</item>
+    <item>Castañuelas</item>
+    <item>Concierto</item>
+    <item>Cuerda</item>
+    <item>Flauta</item>
+    <item>Fusa</item>
+    <item>Guitarra</item>
+    <item>Maraca</item>
+    <item>Micrófono</item>
+    <item>Melodía</item>
+    <item>Nota</item>
+    <item>Ópera</item>
+    <item>Orquesta</item>
+    <item>Pentagrama</item>
+    <item>Piano</item>
+    <item>Pop</item>
+    <item>Saxofón</item>
+    <item>Sonido</item>
+    <item>Tango</item>
+    <item>Tenor</item>
+    <item>Timbre</item>
+    <item>Trompa</item>
+    <item>Ukelele</item>
+    <item>Violín</item>
+    <item>Voz</item>
+    <item>Xilófono</item>
+    <item>tuba</item>
+
+
+    <item>Agenda</item>
+    <item>Bolígrafo</item>
+    <item>Calculadora</item>
+    <item>Calendario</item>
+    <item>arpeta</item>
+    <item>Correo</item>
+    <item>Cuaderno</item>
+    <item>Escritorio</item>
+    <item>Goma</item>
+    <item>Maletín</item>
+    <item>Pizarra</item>
+    <item>Tablero</item>
+    <item>Tijeras</item>
+    <item>Papel</item>
+
+
+    <item>Ballet</item>
+    <item>Bolero</item>
+    <item>Corografía</item>
+    <item>Elenco</item>
+    <item>Escenario</item>
+    <item>Flamenco</item>
+    <item>Mambo</item>
+    <item>Pirueta</item>
+    <item>Ritmo</item>
+    <item>Rumba</item>
+    <item>Swing</item>
+    <item>Tango</item>
+    <item>Tutú</item>
+    <item>Vals</item>
+    <item>Samba</item>
+    <item>Conga</item>
+    <item>Cancán</item>
+
+
+    <item>Acuarela</item>
+    <item>Alabastro</item>
+    <item>Alfarería</item>
+    <item>Cerámica</item>
+    <item>Cómic</item>
+    <item>Danza</item>
+    <item>Dibujante</item>
+    <item>Estatua</item>
+    <item>Grafiti</item>
+    <item>Lienzo</item>
+    <item>Litografía</item>
+    <item>Mezquita</item>
+    <item>Museo</item>
+    <item>Óleo</item>
+
+
+    <item>Pigmento</item>
+    <item>Pincel</item>
+    <item>Pintura</item>
+    <item>Pórtico</item>
+    <item>Retrato</item>
+    <item>teatro</item>
+
+
+
+    <item>Árbitro</item>
+    <item>Arco</item>
+    <item>Atleta</item>
+    <item>Balón</item>
+    <item>Base</item>
+    <item>Bicicleta</item>
+    <item>Boxeador</item>
+    <item>Canasta</item>
+    <item>Cronómetro</item>
+    <item>Estadio</item>
+    <item>Gimnasta</item>
+    <item>Golf</item>
+    <item>Grada</item>
+    <item>Karate</item>
+    <item>Jugador</item>
+    <item>Maratón</item>
+    <item>Marcador</item>
+    <item>Meta</item>
+    <item>Nadar</item>
+    <item>Obstáculo</item>
+    <item>Olimpiada</item>
+    <item>Pelota</item>
+    <item>Penalti</item>
+    <item>Pista</item>
+    <item>Raqueta</item>
+    <item>Red</item>
+    <item>Saltar</item>
+    <item>victoria</item>
+
     <item>Perro</item>
     <item>Gato</item>
-    <item>Candado</item>
-    <item>Puerta</item>
+    <item>Liebre</item>
+    <item>Conejo</item>
+    <item>Canguro</item>
+    <item>Elefante</item>
+    <item>Ciervo</item>
+    <item>Vaca</item>
+    <item>Camello</item>
+    <item>Mono</item>
+    <item>Cebra</item>
+    <item>Tigre</item>
+    <item>León</item>
+    <item>Rinoceronte</item>
+    <item>Panda</item>
+    <item>Hipopótamo</item>
+    <item>Koala</item>
+    <item>Armadillo</item>
+    <item>Topo</item>
+    <item>Mapache</item>
+    <item>Oso</item>
+    <item>Puercoespín</item>
+    <item>Castor</item>
+    <item>Jirafa</item>
+    <item>Lobo</item>
+    <item>Cabra</item>
+    <item>Gorila</item>
+
+
     <item>Serpiente</item>
-    <item>Cocinero</item>
-    <item>Paraguas</item>
-    <item>Revista</item>
-    <item>Perico</item>
-    <item>Pistola</item>
-    <item>Balas</item>
-    <item>Albañil</item>
+    <item>Lagartija</item>
+    <item>Jaguar</item>
+    <item>Hormiga</item>
+    <item>Iguana</item>
+    <item>Araña</item>
+    <item>Ardilla</item>
+    <item>Oveja</item>
+    <item>Cerdo</item>
+    <item>Gusano</item>
+    <item>Escorpión</item>
+    <item>Ratón</item>
+    <item>Cocodrilo</item>
+    <item>Calamar</item>
+    <item>Ballena</item>
+    <item>Foca</item>
+    <item>Manatí</item>
+    <item>Cangrejo</item>
+    <item>Medusa</item>
+    <item>Pulpo</item>
+    <item>Tiburón</item>
+    <item>Tortuga</item>
+    <item>Pez</item>
+    <item>Sardina</item>
+    <item>Coral</item>
+    <item>Salmón</item>
+    <item>Bacalao</item>
+
+
+    <item>Halcón</item>
+    <item>Quetzal</item>
+    <item>Pavo</item>
+    <item>Loro</item>
+    <item>Guacamaya</item>
+    <item>Flamenco</item>
+    <item>Cardenal</item>
+    <item>Colibrí</item>
+    <item>Pericos</item>
+    <item>Búho</item>
+    <item>Treparriscos</item>
+    <item>Totovía</item>
+    <item>Cuclillos</item>
+    <item>Espátula</item>
+    <item>Turpial</item>
+    <item>Lechuza</item>
+    <item>Cisne</item>
+    <item>Pato</item>
+    <item>Tucán</item>
+    <item>Kiwi</item>
+    <item>Tiranos</item>
+    <item>Alcatraz</item>
+    <item>Sabaneros</item>
+    <item>Gallinas</item>
+    <item>Zopilote</item>
+    <item>Cascanueces</item>
+    <item>Marabú</item>
+
+    <item>abihorcado</item>
+    <item>beja</item>
+    <item>avilán</item>
+    <item>aloma</item>
+    <item>elícanos</item>
+    <item>uervos</item>
+    <item>ornero</item>
+    <item>aviotas</item>
+    <item>gujas</item>
+    <item>inzón</item>
+    <item>orzales</item>
+    <item>acamares</item>
+
+
+
+
+    <item>Sillón</item>
+    <item>Butaca</item>
+    <item>Cana</item>
+    <item>Mesa</item>
+    <item>Silla</item>
+    <item>Cómoda</item>
+    <item>Reloj</item>
+    <item>Percha</item>
+    <item>Armario</item>
+    <item>Archivo</item>
+    <item>Espejo</item>
+    <item>Lámpara</item>
+    <item>Librero</item>
+
+
+
+
+
+
+
+
+    <item>Microondas</item>
+    <item>Tostador</item>
+    <item>Licuadora</item>
+    <item>Batidora</item>
+    <item>Cafetera</item>
+    <item>Platos</item>
+    <item>Ollas</item>
+    <item>Cubiertos</item>
+    <item>Alacena</item>
+    <item>Abrelatas</item>
+    <item>Aceite</item>
+    <item>Alcosa</item>
+    <item>Bandeja</item>
+    <item>Cacerola</item>
+    <item>Cacillo</item>
+    <item>Despensa</item>
+    <item>Escurridor</item>
+
+
+    <item>Fogón</item>
+    <item>Freidora</item>
+    <item>Horno</item>
+    <item>Huevera</item>
+    <item>Mantel</item>
+    <item>Nevera</item>
+    <item>Molino</item>
+    <item>Jarra</item>
+    <item>Parrilla</item>
+    <item>Quemador</item>
+    <item>Receta</item>
+    <item>Sal</item>
+    <item>Azúcar</item>
+    <item>Tenedor</item>
+    <item>Tetera</item>
+    <item>Té</item>
+    <item>Café</item>
+
+
+
+    <item>Televisión</item>
+    <item>Estéreo</item>
+    <item>Bocinas</item>
+    <item>Computadora</item>
+    <item>Impresora</item>
+    <item>Escáner</item>
+    <item>Cámara</item>
+    <item>Radio</item>
+    <item>Teléfono</item>
+    <item>Tablet</item>
+
+
+
+    <item>Contador</item>
+    <item>Actor</item>
+    <item>Actriz</item>
+    <item>Arqueólogo</item>
+    <item>Arquitecto</item>
+    <item>Astronauta</item>
+    <item>Biólogo</item>
+    <item>Empresario</item>
+    <item>Químico</item>
+    <item>Médico</item>
+    <item>Economista</item>
+    <item>Ingeniero</item>
+    <item>Juez</item>
+    <item>Abogado</item>
+    <item>Policía</item>
+    <item>Científico</item>
+    <item>Programador</item>
+    <item>Psicólogo</item>
+    <item>Cirujano</item>
+    <item>Escritor</item>
+    <item>Veterinario</item>
+    <item>Administrador</item>
+    <item>Camarero</item>
+    <item>Zapatero</item>
+    <item>Vendedor</item>
+    <item>Cartero</item>
+    <item>Conserje</item>
+
+    <item>Fotógrafo</item>
+    <item>Enfermero</item>
+    <item>Camionero</item>
+    <item>Socorrista</item>
+    <item>Joyero</item>
+    <item>Electricista</item>
+    <item>Carpintero</item>
+    <item>Plomero</item>
+    <item>Bombero</item>
+    <item>Modelo</item>
+    <item>Bailarín</item>
+    <item>Payaso</item>
+    <item>Portero</item>
+    <item>Panadero</item>
+
+    <item>Madrid</item>
+    <item>París</item>
+    <item>Bruselas</item>
+    <item>Roma</item>
+    <item>Berlín</item>
+    <item>Varsovia</item>
+    <item>Moscú</item>
+    <item>Delhi</item>
+    <item>Pekín</item>
+    <item>Sidney</item>
+    <item>Phoenix</item>
+
+    <item>Denver</item>
+    <item>Chicago</item>
+    <item>Atlanta</item>
+    <item>Filadelfia</item>
+    <item>Bogotá</item>
+    <item>Brasil</item>
+    <item>Caracas</item>
+    <item>Perú</item>
+    <item>Chile</item>
     <item>México</item>
-    <item>Argentina</item>
-    <item>Canada</item>
-    <item>PuertoRico</item>
-    <item>Periodista</item>
-    <item>Estudiante</item>
-    <item>Profesor</item>
-    <item>Lápiz</item>
-    <item>Piano</item>
-    <item>Guitarra</item>
-    <item>Trompeta</item>
-    <item>Acordeon</item>
-    <item>Foco</item>
-    <item>Libro</item>
-    <item>Borrador</item>
-    <item>Pie</item>
-    <item>Mano</item>
-    <item>Cabeza</item>
+    <item>Londres</item>
+
+
+
+
+
 </string-array>
 </resources>

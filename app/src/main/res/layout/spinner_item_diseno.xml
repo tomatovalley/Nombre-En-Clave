@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+       android:paddingEnd="20dp"
+       android:paddingLeft="15dp"
+       android:layout_centerHorizontal="true"
+        android:background="@drawable/maderabackground"
+        android:textColor="#050df5"
+        android:textStyle="bold"
+        android:scrollbarSize="0dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"/>

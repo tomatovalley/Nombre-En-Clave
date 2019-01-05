@@ -3,6 +3,8 @@ package com.example.jesus.codenames
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_play.*
@@ -16,6 +18,8 @@ class Play : AppCompatActivity() {
         setContentView(R.layout.activity_play)
         asignar()
         asignarnombres()
+        llenarlistas()
+
 
 
     }
@@ -318,6 +322,13 @@ class Play : AppCompatActivity() {
             this[randomIndex] = temp
         }
         return this
+    }
+
+    fun llenarlistas(){
+        val spinner: Spinner = findViewById(R.id.spinnernumbers)
+        val arrayadp: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,R.array.numeros,R.layout.spinner_item_diseno)
+        arrayadp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = arrayadp
     }
 
 
