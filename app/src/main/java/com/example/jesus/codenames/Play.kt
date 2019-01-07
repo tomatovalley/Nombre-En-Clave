@@ -14,18 +14,21 @@ import kotlin.random.Random
 
 class Play : AppCompatActivity() {
     var tablita = generartab()
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play)
-
+        val wordz = asignarnombres()
         tablita.shuffle()
         asignarcolor()
-        asignarnombres()
         llenarlistas()
 
         boton_enviar.setOnClickListener {
             val intento = Intent(this, playops::class.java)
             intento.putIntegerArrayListExtra("tabla",tablita)
+            intento.putExtra("wordz",wordz)
             startActivity(intento)
 
         }
@@ -207,58 +210,58 @@ class Play : AppCompatActivity() {
     }
 
 
-    fun asignarnombres() {
+  private  fun asignarnombres():Array<String> {
         val res = resources
         val wordz = res.getStringArray(R.array.codes)
         wordz.shuffle()
 
         val textView = findViewById(R.id.txt1) as TextView
 
-        val textView2: TextView = findViewById(R.id.txt2) as TextView
+        val textView2 = findViewById(R.id.txt2) as TextView
 
-        val textView3: TextView = findViewById(R.id.txt3) as TextView
+        val textView3 = findViewById(R.id.txt3) as TextView
 
-        val textView4: TextView = findViewById(R.id.txt4) as TextView
+        val textView4 = findViewById(R.id.txt4) as TextView
 
-        val textView5: TextView = findViewById(R.id.txt5) as TextView
+        val textView5 = findViewById(R.id.txt5) as TextView
 
-        val textView6: TextView = findViewById(R.id.txt6) as TextView
+        val textView6 = findViewById(R.id.txt6) as TextView
 
-        val textView7: TextView = findViewById(R.id.txt7) as TextView
+        val textView7 = findViewById(R.id.txt7) as TextView
 
-        val textView8: TextView = findViewById(R.id.txt8) as TextView
+        val textView8 = findViewById(R.id.txt8) as TextView
 
-        val textView9: TextView = findViewById(R.id.txt9) as TextView
+        val textView9 = findViewById(R.id.txt9) as TextView
 
-        val textView10: TextView = findViewById(R.id.txt10) as TextView
+        val textView10 = findViewById(R.id.txt10) as TextView
 
-        val textView11: TextView = findViewById(R.id.txt11) as TextView
+        val textView11 = findViewById(R.id.txt11) as TextView
 
-        val textView12: TextView = findViewById(R.id.txt12) as TextView
+        val textView12 = findViewById(R.id.txt12) as TextView
 
-        val textView13: TextView = findViewById(R.id.txt13) as TextView
+        val textView13 = findViewById(R.id.txt13) as TextView
 
-        val textView14: TextView = findViewById(R.id.txt14) as TextView
+        val textView14 = findViewById(R.id.txt14) as TextView
 
-        val textView15: TextView = findViewById(R.id.txt15) as TextView
+        val textView15 = findViewById(R.id.txt15) as TextView
 
-        val textView16: TextView = findViewById(R.id.txt16) as TextView
+        val textView16 = findViewById(R.id.txt16) as TextView
 
-        val textView17: TextView = findViewById(R.id.txt17) as TextView
+        val textView17 = findViewById(R.id.txt17) as TextView
 
-        val textView18: TextView = findViewById(R.id.txt18) as TextView
+        val textView18 = findViewById(R.id.txt18) as TextView
 
-        val textView19: TextView = findViewById(R.id.txt19) as TextView
+        val textView19 = findViewById(R.id.txt19) as TextView
 
-        val textView20: TextView = findViewById(R.id.txt20) as TextView
+        val textView20 = findViewById(R.id.txt20) as TextView
 
-        val textView21: TextView = findViewById(R.id.txt21) as TextView
+        val textView21 = findViewById(R.id.txt21) as TextView
 
-        val textView22: TextView = findViewById(R.id.txt22) as TextView
+        val textView22 = findViewById(R.id.txt22) as TextView
 
-        val textView23: TextView = findViewById(R.id.txt23) as TextView
+        val textView23 = findViewById(R.id.txt23) as TextView
 
-        val textView24: TextView = findViewById(R.id.txt24) as TextView
+        val textView24 = findViewById(R.id.txt24) as TextView
 
         val textView25: TextView = findViewById(R.id.txt25) as TextView
         var indice = 0
@@ -312,7 +315,7 @@ class Play : AppCompatActivity() {
          indice++
          textView25.text = wordz[indice]
 
-
+        return wordz
     }
 
     fun <T> Array<T>.shuffle(): Array<T>{

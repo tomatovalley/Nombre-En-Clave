@@ -24,6 +24,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="50dp"
                         android:id="@+id/img1b"/>
@@ -43,6 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img2b"/>
@@ -63,6 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img3b"/>
@@ -81,6 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img4b"/>
@@ -99,6 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img5b"/>
@@ -123,6 +128,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img6b"/>
@@ -141,6 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img7b"/>
@@ -159,6 +166,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img8b"/>
@@ -177,6 +185,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img9b"/>
@@ -195,6 +204,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img10b"/>
@@ -219,6 +229,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img11b"/>
@@ -237,6 +248,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img12b"/>
@@ -255,6 +267,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img13b"/>
@@ -273,6 +286,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img14b"/>
@@ -291,6 +305,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img15b"/>
@@ -314,6 +329,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img16b"/>
@@ -332,6 +348,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img17b"/>
@@ -350,6 +367,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img18b"/>
@@ -368,6 +386,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img19b"/>
@@ -386,6 +405,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img20b"/>
@@ -410,6 +430,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img21b"/>
@@ -428,6 +449,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img22b"/>
@@ -446,6 +468,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img23b"/>
@@ -464,6 +487,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img24b"/>
@@ -482,6 +506,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <ImageView
+                        android:background="@drawable/cartablanca"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:id="@+id/img25b"/>
