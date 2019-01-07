@@ -1,5 +1,6 @@
 package com.example.jesus.codenames
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,14 +13,22 @@ import kotlin.random.Random
 
 
 class Play : AppCompatActivity() {
-
+    var tablita = generartab()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play)
-        asignar()
+
+        tablita.shuffle()
+        asignarcolor()
         asignarnombres()
         llenarlistas()
 
+        boton_enviar.setOnClickListener {
+            val intento = Intent(this, playops::class.java)
+            intento.putIntegerArrayListExtra("tabla",tablita)
+            startActivity(intento)
+
+        }
 
 
     }
@@ -35,175 +44,169 @@ class Play : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
     }
-    fun asignar() {
+    fun asignarcolor(){
+        for (lugar in 0..24){
+            var coloreferente = tablita[lugar]
+            when (lugar) {
+                0 ->
+                    when (coloreferente) {
+                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img1)
+                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img1)
+                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img1)
+                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img1)
 
-        val tablero = generar_tablero()
-        var lugar = 0
-
-
-
-        for (i in 0..4) {
-            for (j in 0..4) {
-                var coloreferente = tablero[i][j]
-                when (lugar) {
-                    0 ->
-                        when (coloreferente) {
-                            0 -> Picasso.get().load(R.drawable.cartaroja).into(img1)
-                            1 -> Picasso.get().load(R.drawable.cartaazul).into(img1)
-                            2 -> Picasso.get().load(R.drawable.cartablanca).into(img1)
-                            3 -> Picasso.get().load(R.drawable.cartanegra).into(img1)
-
-                        }
-                    1 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img2)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img2)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img2)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img2)
                     }
-                    2 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img3)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img3)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img3)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img3)
-                    }
-                    3 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img4)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img4)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img4)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img4)
-                    }
-                    4 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img5)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img5)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img5)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img5)
-                    }
-                    5 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img6)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img6)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img6)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img6)
-                    }
-                    6 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img7)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img7)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img7)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img7)
-                    }
-                    7 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img8)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img8)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img8)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img8)
-                    }
-                    8 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img9)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img9)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img9)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img9)
-                    }
-                    9 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img10)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img10)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img10)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img10)
-                    }
-                    10 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img11)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img11)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img11)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img11)
-                    }
-                    11 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img12)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img12)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img12)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img12)
-                    }
-                    12 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img13)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img13)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img13)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img13)
-                    }
-                    13 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img14)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img14)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img14)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img14)
-                    }
-                    14 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img15)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img15)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img15)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img15)
-                    }
-                    15 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img16)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img16)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img16)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img16)
-                    }
-                    16 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img17)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img17)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img17)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img17)
-                    }
-                    17 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img18)
-                        1 -> Picasso.get().load(R.drawable.cartablanca).into(img18)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img18)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img18)
-                    }
-                    18 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img19)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img19)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img19)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img19)
-                    }
-                    19 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img20)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img20)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img20)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img20)
-                    }
-                    20 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img21)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img21)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img21)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img21)
-                    }
-                    21 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img22)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img22)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img22)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img22)
-                    }
-                    22 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img23)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img23)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img23)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img23)
-                    }
-                    23 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img24)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img24)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img24)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img24)
-                    }
-                    24 -> when (coloreferente) {
-                        0 -> Picasso.get().load(R.drawable.cartaroja).into(img25)
-                        1 -> Picasso.get().load(R.drawable.cartaazul).into(img25)
-                        2 -> Picasso.get().load(R.drawable.cartablanca).into(img25)
-                        3 -> Picasso.get().load(R.drawable.cartanegra).into(img25)
-                    }
-
+                1 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img2)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img2)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img2)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img2)
                 }
-                lugar++
+                2 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img3)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img3)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img3)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img3)
+                }
+                3 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img4)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img4)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img4)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img4)
+                }
+                4 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img5)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img5)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img5)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img5)
+                }
+                5 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img6)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img6)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img6)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img6)
+                }
+                6 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img7)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img7)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img7)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img7)
+                }
+                7 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img8)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img8)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img8)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img8)
+                }
+                8 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img9)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img9)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img9)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img9)
+                }
+                9 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img10)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img10)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img10)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img10)
+                }
+                10 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img11)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img11)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img11)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img11)
+                }
+                11 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img12)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img12)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img12)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img12)
+                }
+                12 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img13)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img13)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img13)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img13)
+                }
+                13 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img14)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img14)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img14)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img14)
+                }
+                14 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img15)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img15)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img15)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img15)
+                }
+                15 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img16)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img16)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img16)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img16)
+                }
+                16 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img17)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img17)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img17)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img17)
+                }
+                17 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img18)
+                    1 -> Picasso.get().load(R.drawable.cartablanca).into(img18)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img18)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img18)
+                }
+                18 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img19)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img19)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img19)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img19)
+                }
+                19 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img20)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img20)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img20)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img20)
+                }
+                20 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img21)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img21)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img21)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img21)
+                }
+                21 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img22)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img22)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img22)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img22)
+                }
+                22 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img23)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img23)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img23)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img23)
+                }
+                23 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img24)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img24)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img24)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img24)
+                }
+                24 -> when (coloreferente) {
+                    0 -> Picasso.get().load(R.drawable.cartaroja).into(img25)
+                    1 -> Picasso.get().load(R.drawable.cartaazul).into(img25)
+                    2 -> Picasso.get().load(R.drawable.cartablanca).into(img25)
+                    3 -> Picasso.get().load(R.drawable.cartanegra).into(img25)
+                }
+
             }
+
         }
     }
+
+
     fun asignarnombres() {
         val res = resources
         val wordz = res.getStringArray(R.array.codes)
@@ -333,6 +336,8 @@ class Play : AppCompatActivity() {
 
 
 }
+
+
 
 
 
