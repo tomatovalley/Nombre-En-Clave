@@ -9,19 +9,23 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity
-                android:name=".Play"
-                android:screenOrientation="landscape"
-                android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-            >
+        <activity android:name=".Login"
+                  android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+                  android:screenOrientation="portrait"
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+                android:name=".Play"
+                android:screenOrientation="landscape"
+                android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        </activity>
         <activity android:name=".playops"
-                    android:screenOrientation="landscape"
+                  android:screenOrientation="landscape"
                   android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         >
         </activity>

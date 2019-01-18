@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "120196167710",
+    "firebase_url": "https://nombresclave.firebaseio.com",
+    "project_id": "nombresclave",
+    "storage_bucket": "nombresclave.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120196167710:android:2cc64d87f9f3b512",
+        "android_client_info": {
+          "package_name": "com.example.jesus.codenames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120196167710-m1hl5h5q3bvekfe3cfn91kplgnvil63l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM89fOABSiRglExYtERrtDbobRuB_H5ss"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
