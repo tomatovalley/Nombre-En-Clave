@@ -5,6 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:background="@drawable/gradient_bg"
         android:orientation="vertical"
         tools:context=".Login">
@@ -21,15 +22,19 @@
                   android:layout_marginEnd="30dp"
                   android:layout_marginTop="20dp"
                   android:background="@drawable/rectangulo_degradado">
-        <AutoCompleteTextView android:layout_width="match_parent"
+        <AutoCompleteTextView
+                              android:id="@+id/correotxt"
+                              android:layout_width="match_parent"
                               android:layout_height="50dp"
                               android:layout_marginStart="15dp"
                               android:layout_marginTop="35dp"
                               android:layout_marginEnd="15dp"
-                              android:hint="Nombre: Usuario/Correo"
+                              android:hint="Correo"
                               android:drawableLeft="@drawable/user_icon"
                               android:background="@drawable/input_circular"/>
-        <AutoCompleteTextView android:layout_width="match_parent"
+        <AutoCompleteTextView
+                              android:id="@+id/contratxt"
+                              android:layout_width="match_parent"
                               android:layout_height="50dp"
                               android:layout_marginStart="15dp"
                               android:layout_marginTop="35dp"
@@ -47,24 +52,37 @@
 
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
+                  android:layout_height="wrap_content"
                   android:layout_marginStart="15dp"
                   android:layout_marginEnd="15dp"
                   android:orientation="horizontal"
                   android:layout_marginTop="15dp">
-        <Button android:layout_marginStart="10dp"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input_circular"
-                android:text="Registrarse"
-                android:textColor="#000"/>
-        <Button android:layout_width="150dp"
+        <Button
+                android:id="@+id/loginb"
                 android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_circular"
+                android:text="Iniciar Sesión"
+                android:textColor="#000"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="100dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+                  android:text="No tiene cuenta?"
+                  android:layout_height="wrap_content"/>
+        <Button android:id="@+id/regisb"
+                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAlignment="textStart"
+                android:layout_marginStart="15dp"
+                android:layout_height="wrap_content"
                 android:text="Registrarse"
                 android:textColor="#000"/>
-
 
     </LinearLayout>
 
