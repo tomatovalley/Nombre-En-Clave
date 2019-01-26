@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Entes">
+        <item>Animal</item>
+        <item>Mueble</item>
+        <item>Cocina</item>
+        <item>Electrónica</item>
+        <item>Profesión</item>
+        <item>Oficio</item>
+        <item>Lugar</item>
+        <item>Fruta</item>
+        <item>Tecnología</item>
+        <item>Salud</item>
+        <item>Literatura</item>
+        <item>Justicia</item>
+        <item>Naturaleza</item>
+        <item>Ciencia</item>
+        <item>Música</item>
+        <item>Oficina</item>
+        <item>Baile</item>
+        <item>Arte</item>
+        <item>Deporte</item>
+    </string-array>
+    <string-array name="colores" >
+    <item>Negro </item>
+    <item>Azul  </item>
+    <item>Amaril</item>
+    <item>Rojo  </item>
+    <item>Violet</item>
+    <item>Naranj</item>
+    <item>Gris  </item>
+    <item>Rosa  </item>
+    <item>Verde </item>
+    </string-array>
+<string-array name="acciones">
+          <item>Correr</item>
+          <item>Caminar</item>
+          <item>Saltar</item>
+          <item>Cantar</item>
+          <item>Nadar</item>
+          <item>Aruñar</item>
+          <item>Volar</item>
+          <item>Trepar</item>
+          <item>Arrastrar</item>
+          <item>Bailar</item>
+          <item>Comer</item>
+          <item>Sentar</item>
+          <item>Descansar</item>
+          <item>Guardar</item>
+          <item>Ver</item>
+          <item>Cocinar</item>
+          <item>Calentar</item>
+          <item>Enfriar</item>
+          <item>Entretener</item>
+          <item>Escuchar</item>
+          <item>Trabajar</item>
+          <item>Hablar</item>
+          <item>Investigar</item>
+          <item>Construir</item>
+          <item>Viajar</item>
+          <item>Probar</item>
+          <item>Atender</item>
+          <item>Curar</item>
+          <item>Reír</item>
+          <item>Cuidar</item>
+          <item>Convencer</item>
+          <item>Comprar</item>
+          <item>Comunicar</item>
+          <item>Recopilar</item>
+</string-array>
+
+</resources>

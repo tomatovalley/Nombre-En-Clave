@@ -1,9 +1,8 @@
 package com.example.jesus.codenames
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
@@ -31,6 +30,10 @@ class Play : AppCompatActivity() {
             intento.putExtra("wordz",wordz)
             startActivity(intento)
 
+        }
+        btonpista.setOnClickListener{
+            val uwu :modalPistas = modalPistas()
+            uwu.show(this.supportFragmentManager,"ejemplo")
         }
 
 

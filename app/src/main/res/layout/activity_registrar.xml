@@ -4,13 +4,14 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/regisbg"
+        android:gravity="center_horizontal"
         tools:context=".Registrar">
     <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
         <TextView
                 android:text="Registro"
@@ -22,33 +23,14 @@
     </LinearLayout>
     <LinearLayout
                   android:background="@drawable/rectangulo_degradado"
-                  android:layout_width="match_parent"
+                  android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_marginTop="100dp"
                   android:orientation="vertical">
         <AutoCompleteTextView
-                android:id="@+id/correotxt2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginEnd="15dp"
-                android:hint="Correo"
-                android:drawableLeft="@drawable/user_icon"
-                android:background="@drawable/input_circular"/>
-        <AutoCompleteTextView
-                android:id="@+id/contratxt2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginEnd="15dp"
-                android:hint="Contraseña"
-                android:drawableLeft="@drawable/candado"
-                android:background="@drawable/input_circular"/>
-        <AutoCompleteTextView
+                android:inputType="text"
                 android:id="@+id/nombretxt"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="35dp"
@@ -56,15 +38,37 @@
                 android:hint="nombre"
                 android:drawableLeft="@drawable/user_icon"
                 android:background="@drawable/input_circular"/>
+        <AutoCompleteTextView
+                android:inputType="textEmailAddress"
+                android:id="@+id/correotxt2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="15dp"
+                android:hint="Correo"
+                android:drawableLeft="@drawable/email"
+                android:background="@drawable/input_circular"/>
+        <AutoCompleteTextView
+                android:inputType="textPassword"
+                android:id="@+id/contratxt2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="15dp"
+                android:hint="Contraseña"
+                android:drawableLeft="@drawable/candado"
+                android:background="@drawable/input_circular"/>
+
 
 
     </LinearLayout>
     <Button
             android:id="@+id/registb"
             android:background="@drawable/input_circular"
-            android:layout_marginStart="150dp"
             android:layout_marginTop="30dp"
             android:hint="Registrarse"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"/>
 </LinearLayout>

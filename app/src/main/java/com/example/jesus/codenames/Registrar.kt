@@ -1,55 +1,57 @@
 package com.example.jesus.codenames
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.text.TextUtils
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.example.jesus.codenames.Retrofit.IMyService
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_registrar.*
 
 class Registrar : AppCompatActivity() {
-    lateinit var nDatabase : DatabaseReference
-        val mAuth = FirebaseAuth.getInstance()
+    lateinit var iMyService : IMyService
+    internal var compositeDisposable= CompositeDisposable()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrar)
         val btnr = findViewById<View>(R.id.registb) as Button
 
-        nDatabase = FirebaseDatabase.getInstance().getReference("Names")
+
 
         btnr.setOnClickListener {
-            this.register()
+            this.register(nombretxt.text.toString(),correotxt.text.toString(),contratxt.text.toString())
         }
 
 
     }
 
-   private fun register(){
-       val nameTxt = findViewById<View>(R.id.nombretxt) as EditText
-       val emailTxt = findViewById<View>(R.id.correotxt2) as EditText
-       val passTxt = findViewById<View>(R.id.contratxt2) as EditText
-       var email = emailTxt.text.toString()
-       var password = passTxt.text.toString()
-       var name = nameTxt.text.toString()
+   private fun register(name:String,email:String,password:String) {
+       //checamos campos vacios
+       if(TextUtils.isEmpty(email)){
+           Toast.makeText(this@Registrar,"el correo electronico no puede estar vacio", Toast.LENGTH_LONG).show()
+           return
+       }
+       if(TextUtils.isEmpty(password)){
+           Toast.makeText(this@Registrar,"la contraseña no puede estar vacia", Toast.LENGTH_LONG).show()
+           return
+       }
+       if(TextUtils.isEmpty(name)){
+           Toast.makeText(this@Registrar,"el nombre no puede estar vacip", Toast.LENGTH_LONG).show()
+           return
+       }
 
-        if (!name.isEmpty() && !password.isEmpty() && !email.isEmpty()){
-                    mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful){
-                            val user = mAuth.currentUser
-                            val uid = user!!.uid
-                            nDatabase.child(uid).child("Name").setValue(name)
-                            Toast.makeText(this,"Ha sido registrado ",Toast.LENGTH_LONG).show()
-                            startActivity(Intent(this, Menu::class.java))
-                        }else{
-                            Toast.makeText(this,"Error",Toast.LENGTH_LONG).show()
-                        }
-                    }
-        }else{
-            Toast.makeText(this,"Complete los campos adecuadamente",Toast.LENGTH_LONG).show()
-        }
+
+       compositeDisposable.add(iMyService.registerUser(email,name,password)
+           .subscribeOn(Schedulers.io())
+           .observeOn(AndroidSchedulers.mainThread())
+           .subscribe { result ->
+               Toast.makeText(this@Registrar,""+result, Toast.LENGTH_LONG).show()
+           })
+
    }
 }

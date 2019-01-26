@@ -517,10 +517,11 @@
                     android:layout_height="match_parent"/>
         </LinearLayout>
         <LinearLayout
-                android:layout_margin="10dp"
+
                 android:orientation="vertical"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="120dp">
+                android:layout_height="wrap_content">
             <Spinner
                     android:id="@+id/spinnernumbers"
                     android:layout_marginTop="5dp"
@@ -531,19 +532,24 @@
             >
 
             </Spinner>
-            <Spinner
+            <Button
                     android:layout_marginTop="15dp"
+                    android:id="@+id/btonpista"
                     android:layout_marginStart="20dp"
-                    android:layout_width="100dp"
-                    android:layout_height="20dp"></Spinner>
-            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></Button>
+            <Button
                         android:id="@+id/boton_enviar"
                     android:layout_marginTop="15dp"
                          android:layout_marginStart="20dp"
-                         android:layout_width="100dp"
-                         android:layout_height="20dp"/>
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
         </LinearLayout>
+        <View android:id="@+id/view1"
+                android:layout_width="match_parent"
+              android:layout_height="match_parent">
 
+        </View>
     </LinearLayout>
 
 </LinearLayout>

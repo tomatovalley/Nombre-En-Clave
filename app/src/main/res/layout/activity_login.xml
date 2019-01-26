@@ -5,13 +5,13 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:background="@drawable/gradient_bg"
         android:orientation="vertical"
         tools:context=".Login">
 
     <ImageView android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="150dp"
                android:layout_marginTop="25dp"
                android:src="@drawable/personima5"
     />
@@ -23,6 +23,7 @@
                   android:layout_marginTop="20dp"
                   android:background="@drawable/rectangulo_degradado">
         <AutoCompleteTextView
+                              android:inputType="textEmailAddress"
                               android:id="@+id/correotxt"
                               android:layout_width="match_parent"
                               android:layout_height="50dp"
@@ -30,9 +31,10 @@
                               android:layout_marginTop="35dp"
                               android:layout_marginEnd="15dp"
                               android:hint="Correo"
-                              android:drawableLeft="@drawable/user_icon"
+                              android:drawableLeft="@drawable/email"
                               android:background="@drawable/input_circular"/>
         <AutoCompleteTextView
+                              android:inputType="textPassword"
                               android:id="@+id/contratxt"
                               android:layout_width="match_parent"
                               android:layout_height="50dp"
@@ -67,8 +69,9 @@
                 android:textColor="#000"/>
     </LinearLayout>
     <LinearLayout
+            android:gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="100dp"
+
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
