@@ -1,5 +1,6 @@
 package com.example.jesus.codenames
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -13,6 +14,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_login.*
+import java.io.FileOutputStream
 
 class Login : AppCompatActivity() {
    lateinit var iMyService : IMyService
@@ -52,7 +54,15 @@ class Login : AppCompatActivity() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { result ->
                 Toast.makeText(this@Login,""+result,Toast.LENGTH_LONG).show()
+                val Filename = "token"
+                val txttoken = result
+                val fos : FileOutputStream = openFileOutput(Filename, Context.MODE_PRIVATE)
+                fos.write(txttoken.toByteArray())
+                fos.close()
+                val intent = Intent(this,Menu::class.java)
+                startActivity(intent)
             })
+
     }
 
     override fun onStop() {

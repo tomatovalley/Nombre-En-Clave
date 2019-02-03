@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0"/>
+        <title>My Api</title>
+        <script src="socket.io/socket.io.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <h1>My app xd</h1>
+        <div id="messages"></div>
+        <br/>
+        <form onsubmit="return addMessage(this)">
+            <input type="text" id="username" placeholder="tu nombre">
+            <input type="text" id="texto"placeholder="cuéntanos algo..">
+            <input type="submit" value="enviar">
+            
+        </form>
+    </body>
+</html>

@@ -7,10 +7,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.example.jesus.codenames.Retrofit.IMyService
+import com.example.jesus.codenames.Retrofit.RetrofitClient
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_registrar.*
 
 class Registrar : AppCompatActivity() {
@@ -24,10 +24,11 @@ class Registrar : AppCompatActivity() {
 
 
         btnr.setOnClickListener {
-            this.register(nombretxt.text.toString(),correotxt.text.toString(),contratxt.text.toString())
+            this.register(nombretxt.text.toString(),correotxt2.text.toString(),contratxt2.text.toString())
         }
 
-
+        val retrofit = RetrofitClient.getInstance()
+        iMyService = retrofit.create(IMyService::class.java)
     }
 
    private fun register(name:String,email:String,password:String) {
