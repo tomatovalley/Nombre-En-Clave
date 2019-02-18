@@ -16,6 +16,7 @@ public class menu extends AppCompatActivity {
     private Button btnsettings;
     //private Socket mSocket;
     private Button btnrooms;
+    private Button whowe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,18 @@ public class menu extends AppCompatActivity {
         btnsettings.setOnClickListener(view -> settings());
         btnrooms = findViewById(R.id.btn_ingresar);
         btnrooms.setOnClickListener(view -> salas());
+        whowe = findViewById(R.id.whowe);
+        whowe.setOnClickListener(view ->{
+            Intent intent = new Intent(menu.this, AboutUs.class );
+            startActivity(intent);
+        });
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     private void settings(){

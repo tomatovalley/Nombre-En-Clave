@@ -1,5 +1,6 @@
 package com.example.codenames.Pantallas;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -30,8 +31,17 @@ public class Room extends AppCompatActivity {
         setviews();
         btnplay.setOnClickListener(view ->{
             mSocket.disconnect();
+            Intent intent = new Intent(this,lobby.class);
+            finish();
+            startActivity(intent);
         });
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
 
     private void setviews(){
         btnplay = findViewById(R.id.btnplay);

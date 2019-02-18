@@ -75,8 +75,10 @@ public class lobby extends AppCompatActivity {
         initSharedPreferences();
         mSocket.connect();
         initviews();
+        mSocket.emit("getroms");
         mSocket.on("allroms",allroms);
         getNickname();
+
 
 
 

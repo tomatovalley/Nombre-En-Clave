@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pantallas.Room"></activity>
-        <activity android:name=".Pantallas.lobby">
+        <activity android:name=".Pantallas.AboutUs"></activity>
+        <activity android:name=".Pantallas.Room" />
+        <activity android:name=".Pantallas.lobby"></activity>
+        <activity android:name=".Pantallas.menu" >
 
         </activity>
-        <activity android:name=".Pantallas.menu" />
         <activity android:name=".Pantallas.Activity_profile" />
         <activity android:name=".Pantallas.MainActivity">
             <intent-filter>

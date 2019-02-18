@@ -71,8 +71,8 @@
             android:layout_marginTop="200dp"
             android:background="@drawable/btn_bg"
             android:fontFamily="sans-serif"
-
-            android:text="QuE SOMOS "
+            android:id="@+id/whowe"
+            android:text="Como se juega?"
             android:textAllCaps="false"
             android:textColor="@color/White"
             android:textSize="16sp" />
