@@ -84,7 +84,7 @@ public class create_room_dialog extends DialogFragment {
                     .subscribe(this::handleResponse, this::handleError));*/
            try {
                Log.e("pruebanick",Constants.NICKNAME);
-               mSocket.emit("create", text,Constants.NICKNAME );
+               mSocket.emit("playerJoinGame",text);
                dismiss();
            }catch(Exception e){
 

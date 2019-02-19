@@ -46,7 +46,7 @@ public class menu extends AppCompatActivity {
     }
 
     private void salas(){
-        Intent intent = new Intent(this,lobby.class);
+        Intent intent = new Intent(this,Lobby2.class);
         startActivity(intent);
     }
 }

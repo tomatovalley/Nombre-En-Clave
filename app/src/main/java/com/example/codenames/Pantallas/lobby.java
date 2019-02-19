@@ -146,16 +146,8 @@ public class lobby extends AppCompatActivity {
 
                     }
 
-
                 }
                 dorv(ar);
-
-
-
-
-
-
-
             } catch (JSONException e) {
                 e.printStackTrace();
             }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Pantallas.Lobby2">
+    <Button
+        android:layout_width="300dp"
+        android:id="@+id/btoncrear"
+        android:textColor="@color/White"
+        android:textSize="30dp"
+        android:text="Crear Sala"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/buttonshape"
+        android:layout_height="90dp" />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnunirse"
+        android:layout_width="300dp"
+        android:text="Unirse a sala existente"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/White"
+        android:background="@drawable/buttonshape"
+        android:layout_height="90dp" />
+
+</LinearLayout>
