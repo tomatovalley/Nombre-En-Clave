@@ -5,7 +5,7 @@ const login = require('./functions/login');
 const profile = require('./functions/profile');
 const password = require('./functions/password');
 const config = require('./config/config.json');
-const createroom = require('./functions/createroom');
+//const createroom = require('./functions/createroom');
 const jwt = require('jsonwebtoken');
 const express = require('express'),
 http = require('http'),
@@ -28,7 +28,7 @@ io.sockets.on('connection',(socket)=>{
 
                                         //RUTAS 
 
-app.post('/rooms',(req,res)=>{
+/*app.post('/rooms',(req,res)=>{
     const name = req.body.name;
     if(!name || !name.trim()){
         res.status(400).json({message: 'Petición invalida'});
@@ -40,7 +40,7 @@ app.post('/rooms',(req,res)=>{
             })
             .catch(err => res.status(err.status).json({message: err.message}));
     }
-});
+});*/
 
 
 
