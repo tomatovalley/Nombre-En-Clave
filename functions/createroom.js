@@ -1,6 +1,6 @@
 'use strict';
 
-const  room = require('./models/Room');
+/*const  room = require('./models/Room');*/
 
 exports.createroom = (name)=>
 
