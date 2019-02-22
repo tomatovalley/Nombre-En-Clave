@@ -10,81 +10,17 @@ const jwt = require('jsonwebtoken');
 const express = require('express'),
 http = require('http'),
 app = express();
-
-//ARRAY 
-
+var codenames = require('./codenames');
 
 server = http.createServer(app),
 io = require('socket.io').listen(server);
+io.set('log level',1);
 app.get('/',(req,res)=>{
     res.send('chat server is running on port 3000')
 });
-//implementamos socket io 
-var people = {};
-io.on('connection',(socket)=>{
-    socket.room = null;
-    refreshrooms();
-    console.log('user connected')
-       /*lista de salas*/   
-        function refreshrooms(){
-            io.emit('allroms',Object.keys(io.sockets.adapter.rooms))
-        }
-    
-        socket.on('create',(nameroom,nickname)=>{
-                    socket.join("room "+ nameroom);
-                    people[socket.id] = nickname;
-                    socket.room = nameroom;
-                    console.log("se ha creado la habitación "+ nameroom); 
-                    console.log("room: %j", nameroom)
-                    console.log(Object.keys(io.sockets.adapter.rooms));
-                    console.log("el usuario "+ nickname +  " ha creado una habitación ");
-                    refreshrooms();
-                    tab = shuffle(tablero);
-                    io.sockets.adapter.rooms[nameroom].tablero = tab;
-                    console.log(xd[0]);
-                    console.log(xd[1]);
-                    console.log(xd[2]);
-                    console.log(xd[3]);
-        })
-        socket.on('join',(nameroom,nickname)=>{
-            var rum = io.sockets.adapter.rooms[nameroom];
-            if(rum.length < 8){
-            socket.room = nameroom; 
-            socket.join(nameroom);
-            console.log("alguien ha entrado a la habitación "+ nameroom )
-            console.log("tiene " + rum.length + " usuarios" ); 
-            console.log("el usuario: "+ nickname + " se ha conectado");
-            
-            }else{
-                console.log("la sala esta llena ");
-            } 
-            var roster = io.sockets.clients(nameroom);
-            roster.foreach(function(people){
-                console.log('Username: ' + people[nameroom].nickname)
-            })        
-          
-        })
 
-        socket.on('start',()=>{
-            var rum  = io.sockets.adapter.room[socket.room];
-            if(rum.length){
-                console.log("pueden empezar");
-            }
-        })
-
-       socket.on('disconnect', function() {
-        var rum = io.sockets.adapter.rooms[socket.room];
-        if(rum!=undefined){
-            console.log( 'un usuario ha salido de la sala' + socket.room + " solo quedan "+ rum.length +" en la sala")
-        }else{
-            console.log("la sala ha sido eliminada");
-            refreshrooms();
-        }
-        
-       // socket.broadcast.emit( "userdisconnect" ,' user has left')
-    
-    
-    });
+io.sockets.on('connection',(socket)=>{
+    codenames.initGame(io,socket);
 
 })
 
@@ -122,9 +58,9 @@ app.post('/authenticate',(req,res)=>{
     }
 });
 app.post('/users',(req,res)=>{
-        const name = req.body.name;
         const email = req.body.email;
         const password = req.body.password;
+        var name = req.body.name;
         if(!name || !email || !password || !name.trim() || !email.trim() || !password.trim()){
                 res.status(400).json({message: 'Invalid Request !'});
         }else{
