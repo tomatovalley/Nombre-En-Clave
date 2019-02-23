@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ti_roomname"
         android:layout_alignParentLeft="true"
-        android:text="Create Room"
+        android:text="Unirse"
         android:layout_marginTop="@dimen/button_margin"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
 

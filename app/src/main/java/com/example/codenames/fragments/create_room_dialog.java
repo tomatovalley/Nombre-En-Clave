@@ -15,17 +15,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.example.codenames.Clases.Response;
+import com.example.codenames.Pantallas.Lobby2;
 import com.example.codenames.Pantallas.MainActivity;
 import com.example.codenames.Pantallas.Room;
 import com.example.codenames.Pantallas.lobby;
 import com.example.codenames.R;
 import com.example.codenames.network.NetworkUtil;
 import com.example.codenames.utils.Constants;
+import com.example.codenames.utils.Variantes;
 import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -85,7 +90,10 @@ public class create_room_dialog extends DialogFragment {
            try {
                Log.e("pruebanick",Constants.NICKNAME);
                mSocket.emit("playerJoinGame",text);
+               mSocket.on("newGamecreated",initdatas);
                dismiss();
+               Intent i = new Intent(getContext(),Room.class);
+               getContext().startActivity(i);
            }catch(Exception e){
 
            }
@@ -144,5 +152,43 @@ public class create_room_dialog extends DialogFragment {
     private void seterror(){
         mti_room.setError(null);
     }
+    Emitter.Listener initdatas = new Emitter.Listener() {
+        @Override
+        public void call(Object... args) {
+            JSONArray data = (JSONArray) args[0];
+            for(int i = 0;i < data.length();i++) {
+                try {
+                    switch (i){
+                        case 0:
+                            Variantes.gameid = data.getString(i);
+                            break;
+                        case 1:
+                            Variantes.pos = data.getInt(i);
+                            break;
+                        case 2:
+                            Variantes.team = data.getString(i);
+                            break;
+                        case 3:
+                            Variantes.rol = data.getString(i);
+                            break;
+                        case 4:
+                            Variantes.admin = data.getBoolean(i);
+                            break;
+                        case 5:
+                            Variantes.jugando = data.getBoolean(i);
+                            break;
+                    }
+                }catch (JSONException e){
+                    e.printStackTrace();
+                }
 
+            }
+            Log.e("pruebaroles",Variantes.gameid);
+
+            Log.e("pruebaroles",Variantes.team);
+            Log.e("pruebaroles",Variantes.rol);
+            Log.e("pruebaroles",Variantes.admin.toString());
+
+        }
+    };
 }

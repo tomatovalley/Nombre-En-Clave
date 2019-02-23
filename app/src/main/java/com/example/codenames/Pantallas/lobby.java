@@ -70,7 +70,7 @@ public class lobby extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lobby);
+        setContentView(R.layout.activity_lobbi);
         mSubscriptions = new CompositeSubscription();
         initSharedPreferences();
         mSocket.connect();
@@ -102,7 +102,6 @@ public class lobby extends AppCompatActivity {
             @Override
             public void run() {
                 rv = findViewById(R.id.rv_salas);
-
                 rv.setLayoutManager(new GridLayoutManager(lobby.this, 1));
                 adapter = new adapter_rv_cardview(room, getApplicationContext(), rv);
                 rv.setAdapter(adapter);

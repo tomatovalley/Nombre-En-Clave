@@ -4,17 +4,25 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.codenames.R;
 import com.example.codenames.utils.Constants;
+import com.example.codenames.utils.Variantes;
+import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
+
+import org.w3c.dom.Text;
 
 import java.net.URISyntaxException;
 
 public class Room extends AppCompatActivity {
     private Socket mSocket ;
+
+
     {
         try {
             mSocket = IO.socket(Constants.Base_URL);
@@ -22,7 +30,11 @@ public class Room extends AppCompatActivity {
         }
     }
         Button btnplay;
-        RecyclerView rv;
+        TextView id;
+        TextView pos;
+        TextView team;
+        TextView rol;
+        TextView admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +42,11 @@ public class Room extends AppCompatActivity {
         setContentView(R.layout.activity_room);
         setviews();
         btnplay.setOnClickListener(view ->{
-            mSocket.disconnect();
-            Intent intent = new Intent(this,lobby.class);
-            finish();
-            startActivity(intent);
+
+            mSocket.emit("hostStartGame",Variantes.gameid);
+
         });
+            mSocket.on("startgame",emepezar);
     }
 
     @Override
@@ -45,12 +57,47 @@ public class Room extends AppCompatActivity {
 
     private void setviews(){
         btnplay = findViewById(R.id.btnplay);
-        rv = findViewById(R.id.rv);
+        id = findViewById(R.id.gameid);
+        id.setText(Variantes.gameid);
+        pos = findViewById(R.id.txtpos);
+        pos.setText(Variantes.pos.toString());
+        team = findViewById(R.id.team);
+        team.setText(Variantes.team);
+        rol = findViewById(R.id.rol);
+        rol.setText(Variantes.rol);
+        admin = findViewById(R.id.admin);
+        admin.setText(Variantes.admin.toString());
+        if(Variantes.admin != true ){
+            btnplay.setEnabled(false);
+            btnplay.setText("Espere a que el host inicie la partida");
+        }else{
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mSocket.disconnect();
+
     }
+
+
+    Emitter.Listener emepezar = new Emitter.Listener() {
+        @Override
+        public void call(Object... args) {
+            if(Variantes.rol.contains("spymaster")){
+                finish();
+                Intent intent = new Intent(Room.this,Play.class);
+                startActivity(intent);
+
+
+                Log.e("verifystart","llego hasta aqui");
+            }else{
+                finish();
+                Intent intent1 = new Intent(Room.this,playops.class);
+                startActivity(intent1);
+
+
+            }
+        }
+    };
 }

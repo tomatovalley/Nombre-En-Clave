@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -525,4 +525,44 @@
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tmr"
+            android:text="Equipo rojo: "
+            android:textColor="@color/red"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tmb"
+            android:text="Equipo Azul: "
+            android:textColor="@color/blue"
+            android:fontFamily="sans-serif-black"
+
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/pista1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="50dp"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_width="match_parent"
+            android:id="@+id/numero1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
