@@ -180,8 +180,8 @@ function gettablero(gameId){
     //elejimos al azar entre los dos tableros disponibles
 function selectcolor(gameId){
     var tablero 
-   var equis = Math.floor(Math.random() * 2) + 1 
-   turno = [1]
+    var equis = Math.floor(Math.random() * 2) + 1 
+    x = [1]
     if(equis == 1){
          tablero = [0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,3]
          io.sockets.in(gameId).emit('empieza',turno);
