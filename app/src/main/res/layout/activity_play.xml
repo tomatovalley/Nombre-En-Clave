@@ -568,7 +568,12 @@
                     android:id="@+id/pista"
                     android:layout_marginStart="20dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></EditText>
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+
+                    >
+
+                </EditText>
                 <Button
                    android:id="@+id/btnenviar"
                     android:layout_marginTop="15dp"

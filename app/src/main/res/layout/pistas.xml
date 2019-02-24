@@ -1,0 +1,142 @@
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maderabackground"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-black"
+                android:paddingRight="0dp"
+                android:text="Otros"
+                android:textSize="30dp" />
+            <ListView
+                android:id="@+id/ls_otros"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Colores"
+                android:fontFamily="sans-serif-black"
+                android:textSize="30dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                />
+            <ListView
+                android:id="@+id/ls_colores"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                 />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acciones"
+                android:fontFamily="sans-serif-black"
+                android:textSize="30dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="10dp"
+                />
+            <ListView
+                android:id="@+id/ls_acciones"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sabores"
+                android:fontFamily="sans-serif-black"
+                android:textSize="30dp"
+                android:paddingLeft="0dp"
+                />
+            <ListView
+                android:id="@+id/ls_sabores"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tamaños"
+                android:fontFamily="sans-serif-black"
+                android:textSize="30dp"
+                android:paddingRight="0dp"
+                android:paddingLeft="5dp"
+
+                />
+            <ListView
+                android:id="@+id/ls_tamaños"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Climas"
+                android:fontFamily="sans-serif-black"
+                android:textSize="30dp"
+                android:paddingRight="0dp"
+                android:paddingLeft="0dp"
+                android:layout_marginLeft="20sp"
+                />
+            <ListView
+                android:id="@+id/ls_climas"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
