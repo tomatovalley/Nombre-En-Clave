@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
     <corners
-        android:topLeftRadius="100dp"
-        android:topRightRadius="0dp"
-        android:bottomLeftRadius="0dp"
-        android:bottomRightRadius="100dp"
+        android:radius="14dp"
         />
     <solid
-        android:color="#00000000"
+        android:color="#110D4F"
         />
     <padding
         android:left="0dp"
@@ -16,11 +13,11 @@
         android:bottom="0dp"
         />
     <size
-        android:width="60sp"
-        android:height="25sp"
+        android:width="270dp"
+        android:height="60dp"
         />
     <stroke
         android:width="3dp"
-        android:color="#878787"
+        android:color="#060352"
         />
 </shape>

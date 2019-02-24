@@ -3,6 +3,7 @@ package com.example.codenames.fragments;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
@@ -91,9 +92,17 @@ public class create_room_dialog extends DialogFragment {
                Log.e("pruebanick",Constants.NICKNAME);
                mSocket.emit("playerJoinGame",text);
                mSocket.on("newGamecreated",initdatas);
-               dismiss();
-               Intent i = new Intent(getContext(),Room.class);
-               getContext().startActivity(i);
+
+               Handler handler = new Handler();
+               handler.postDelayed(new Runnable() {
+                                       @Override
+                                       public void run() {
+                                           Intent i = new Intent(getContext(),Room.class);
+                                           getContext().startActivity(i);
+                                           dismiss();
+                                       }
+                                   },1000);
+
            }catch(Exception e){
 
            }

@@ -1,6 +1,7 @@
 package com.example.codenames.Pantallas;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -22,7 +23,7 @@ public class menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        btnsettings = findViewById(R.id.btnsettings);
+
         btnsettings.setOnClickListener(view -> settings());
         btnrooms = findViewById(R.id.btn_ingresar);
         btnrooms.setOnClickListener(view -> salas());

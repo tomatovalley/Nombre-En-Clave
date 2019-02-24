@@ -40,6 +40,7 @@ public class Room extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
+        mSocket.connect();
         setviews();
         btnplay.setOnClickListener(view ->{
 
@@ -85,14 +86,14 @@ public class Room extends AppCompatActivity {
         @Override
         public void call(Object... args) {
             if(Variantes.rol.contains("spymaster")){
-                finish();
+
                 Intent intent = new Intent(Room.this,Play.class);
                 startActivity(intent);
 
 
                 Log.e("verifystart","llego hasta aqui");
             }else{
-                finish();
+                Log.e("probandoinicio","UWU");
                 Intent intent1 = new Intent(Room.this,playops.class);
                 startActivity(intent1);
 

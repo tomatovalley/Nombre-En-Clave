@@ -98,6 +98,7 @@ public class Play extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_play);
+        initonlyviews();
         if(Variantes.admin == false){
             initviews();
         }
@@ -151,12 +152,13 @@ public class Play extends AppCompatActivity {
                 btnenviar.setText("esperando");
                 pista.setEnabled(false);
                 numero.setEnabled(false);
+                pista.setText("");
+                numero.setText("");
             }
         });
 
     }
-
-    private void initviews(){
+    private void initonlyviews(){
         puntazul = findViewById(R.id.tmb);
         puntRojo = findViewById(R.id.tmr);
         btnenviar = findViewById(R.id.btnenviar);
@@ -212,6 +214,9 @@ public class Play extends AppCompatActivity {
         txt22 = findViewById(R.id.txt23);
         txt23 = findViewById(R.id.txt24);
         txt24 = findViewById(R.id.txt25);
+    }
+    private void initviews(){
+
             if(Variantes.admin == true){
                 mSocket.emit("gettablero",Variantes.gameid);
             }

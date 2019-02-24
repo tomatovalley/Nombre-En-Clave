@@ -143,6 +143,7 @@ public class playops extends AppCompatActivity {
                 img22.setEnabled(true);
                 img23.setEnabled(true);
                 img24.setEnabled(true);
+                Toast.makeText(playops.this,"Es tu turno",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -778,8 +779,26 @@ public class playops extends AppCompatActivity {
         Log.e("puntuaciones",data.toString());
         if(data == 0){
             Variantes.puntuacionB++;
+            if(Variantes.empezo ==2){
+                if(Variantes.puntuacionB == 9){
+                    mSocket.emit("ganador","Equipo Azul",Variantes.gameid);
+                }
+            }else{
+                if(Variantes.puntuacionB == 8){
+                    mSocket.emit("ganador","Equipo Azul",Variantes.gameid);
+                }
+            }
         }else{
             Variantes.puntuacionR++;
+            if(Variantes.empezo == 1){
+                if(Variantes.puntuacionR == 9){
+                    mSocket.emit("ganador","Equipo Rojo",Variantes.gameid);
+                }
+            }else{
+                if(Variantes.puntuacionR == 8){
+                    mSocket.emit("ganador","Equipo Rojo",Variantes.gameid);
+                }
+            }
         }
         runOnUiThread(new Runnable() {
             @Override
