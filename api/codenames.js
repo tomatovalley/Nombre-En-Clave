@@ -60,7 +60,7 @@ exports.initGame = function(sio,socket){
  };
 
  function desconectado(){
-     this.emit('TheHostFail',"el host se ha retirado");
+    this.disconnect();
  }
 
  function hostStartGame(gameid){
